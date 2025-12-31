@@ -19,7 +19,7 @@ const ImageViewer = () => {
                             e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWRlZGVkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjMzMzIj5JbWFnZSBFcnJvcjwvdGV4dD48L3N2Zz4='; 
                         }} 
                     />
-                    <div className="absolute bottom-[-50px] left-0 w-full text-center font-display text-white text-2xl drop-shadow-lg">
+                    <div className="absolute bottom-[-50px] left-0 w-full text-center font-vietnamese text-white text-2xl font-semibold drop-shadow-lg">
                         {photo.caption || "Merry Christmas"}
                     </div>
                 </div>

@@ -10,6 +10,7 @@ export default {
         serif: ['"Playfair Display"', 'serif'],
         display: ['"Cinzel"', 'serif'],
         sans: ['"Lato"', 'sans-serif'],
+        vietnamese: ['"Noto Sans"', 'sans-serif'], // Font hỗ trợ tiếng Việt
       },
       colors: {
         gold: {

@@ -79,6 +79,11 @@ const Polaroid = ({ photo, index, count }) => {
         }
     });
 
+    // Ẩn letter nếu chưa unlock (sau tất cả hooks)
+    if (photo.locked) {
+        return null;
+    }
+
     return (
         <group 
             ref={meshRef}
@@ -97,7 +102,7 @@ const Polaroid = ({ photo, index, count }) => {
                  <planeGeometry args={[1, 0.2]} />
                  <meshBasicMaterial color="#f0f0f0" />
             </mesh>
-            {/* Text Caption - White color */}
+            {/* Text Caption - White color (font mặc định hỗ trợ tiếng Việt) */}
             {photo.caption && (
                 <Text
                     position={[0, -0.5, 0.01]}
