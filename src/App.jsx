@@ -45,11 +45,10 @@ const App = () => {
             <PhotoCounter />
             <video 
                 ref={videoRef} 
-                className="fixed bottom-4 right-4 w-32 h-24 object-cover rounded border border-gold-600/50 opacity-50 hover:opacity-100 transition-opacity z-40 pointer-events-none" 
+                className="hidden" 
                 autoPlay 
                 playsInline 
                 muted 
-                style={{ transform: 'scaleX(-1)' }} 
             />
         </>
     );
