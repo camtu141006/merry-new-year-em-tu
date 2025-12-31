@@ -2,13 +2,12 @@
 
 ## 🎯 Các cử chỉ điều khiển
 
-### 👆 **Pointing Gesture** - Di chuyển & xoay camera
+### 👆 **Pointing Gesture** - Di chuyển cursor
 **Cách làm:** Chỉ duỗi 1 ngón trỏ, các ngón khác cong lại
 
 **Chức năng:** 
 - Di chuyển cursor trên màn hình
-- Kéo để xoay camera quanh cây
-- Cursor sẽ có màu **vàng** với icon 👆
+- Cursor sẽ trong suốt viền **vàng** với icon 👆
 
 ```
      👆 Ngón trỏ (duỗi)
@@ -17,18 +16,36 @@
 
 ---
 
-### 🤏 **Pinch Gesture** - Chọn ảnh
-**Cách làm:** Chụm ngón cái và ngón trỏ lại gần nhau
+### ✌️ **Victory Gesture** - Kéo xoay camera
+**Cách làm:** Duỗi 2 ngón (trỏ + giữa), cong 2 ngón còn lại
+
+**Chức năng:**
+- Nhấn giữ và kéo để xoay camera quanh cây
+- Cursor sẽ chuyển sang màu **xanh dương** với icon ✌️
+- Giữ gesture này và di chuyển tay để xoay
+
+```
+     👆 Ngón trỏ (duỗi)
+     👆 Ngón giữa (duỗi)
+     ✊ Ngón áp út (cong)
+     ✊ Ngón út (cong)
+```
+
+---
+
+### 🖖 **Three Fingers** - Chọn ảnh
+**Cách làm:** Duỗi 3 ngón (trỏ + giữa + áp út), cong ngón út
 
 **Chức năng:**
 - Chọn và mở ảnh khi hover vào polaroid
-- Cursor sẽ lớn hơn và chuyển sang màu **xanh lá** với icon 🤏
+- Cursor sẽ lớn hơn và chuyển sang màu **xanh lá** với icon 🖖
 - Ảnh được chọn sẽ được đánh dấu đã xem
 
 ```
-     👆 Ngón trỏ
-     👍 Ngón cái
-     (chụm lại gần nhau)
+     👆 Ngón trỏ (duỗi)
+     👆 Ngón giữa (duỗi)
+     👆 Ngón áp út (duỗi)
+     ✊ Ngón út (cong)
 ```
 
 ---
@@ -67,9 +84,11 @@
 
 | Gesture | Màu | Icon | Ý nghĩa |
 |---------|-----|------|---------|
-| **Pointing** | 🟡 Vàng | 👆 | Di chuyển/xoay camera |
-| **Pinch** | 🟢 Xanh lá | 🤏 | Sẵn sàng chọn ảnh |
-| **Idle** | ⚪ Trong suốt | - | Chưa nhận diện |
+| **Pointing** | 🟡 Vàng (viền) | 👆 | Di chuyển cursor |
+| **Victory** | 🔵 Xanh dương | ✌️ | Đang kéo xoay |
+| **Three Fingers** | 🟢 Xanh lá | 🖖 | Chọn ảnh |
+| **Open Palm** | 🟠 Cam | 🖐️ | Phân tán cây |
+| **Closed Fist** | 🟣 Tím | ✊ | Tập hợp cây |
 
 ---
 
@@ -93,10 +112,11 @@ Nếu muốn tắt hand tracking và chỉ dùng chuột:
 ## 🎄 Tóm tắt nhanh
 
 ```
-👆  Pointing → Di chuyển & xoay (vàng)
-🤏  Pinch    → Chọn ảnh (xanh)
-🖐️  Open     → Phân tán cây
-✊  Fist     → Tập hợp cây
+👆  1 ngón   → Di chuyển cursor (vàng viền)
+✌️  2 ngón   → Kéo xoay camera (xanh dương)
+🖖  3 ngón   → Chọn ảnh (xanh lá)
+🖐️  4+ ngón  → Phân tán cây (cam)
+✊  Nắm tay  → Tập hợp cây (tím)
 ```
 
 Chúc bạn trải nghiệm vui vẻ! 🎅✨

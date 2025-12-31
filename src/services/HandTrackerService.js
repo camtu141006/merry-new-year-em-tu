@@ -83,30 +83,31 @@ class HandTrackerService {
                 gesture = 'closed_fist';
                 this.isPinching = false;
             } else {
-                // PRIORITY 2: PINCH (for selecting photos)
-                // Hysteresis logic
-                if (!this.isPinching && distance < this.pinchThresholdOn) {
-                    this.isPinching = true;
-                } else if (this.isPinching && distance > this.pinchThresholdOff) {
+                // PRIORITY 2: THREE FINGERS 🖖 (Index + Middle + Ring extended) - Chọn hình
+                const isThreeFingers = !indexCurled && !middleCurled && !ringCurled && pinkyCurled;
+                
+                if (isThreeFingers) {
+                    gesture = 'three_fingers';
                     this.isPinching = false;
-                }
-
-                if (this.isPinching) {
-                    gesture = 'pinch';
                 } else {
-                    // PRIORITY 3: POINTING 👆 (Only index finger extended)
-                    // Used for moving cursor and rotating camera
-                    const isPointing = !indexCurled && middleCurled && ringCurled && pinkyCurled;
+                    // PRIORITY 3: VICTORY ✌️ (Index + Middle extended) - Kéo xoay camera
+                    const isVictory = !indexCurled && !middleCurled && ringCurled && pinkyCurled;
                     
-                    if (isPointing) {
-                        gesture = 'pointing';
+                    if (isVictory) {
+                        gesture = 'victory';
+                        this.isPinching = false;
                     } else {
-                        // PRIORITY 4: OPEN PALM
-                        // If not fist and not pinch, check if fingers are extended
-                        // Require at least 3 fingers to be extended to trigger disperse
-                        const extendedCount = (!indexCurled ? 1 : 0) + (!middleCurled ? 1 : 0) + (!ringCurled ? 1 : 0) + (!pinkyCurled ? 1 : 0);
-                        if (extendedCount >= 3) {
-                            gesture = 'open_palm';
+                        // PRIORITY 4: POINTING 👆 (Only index finger) - Di chuyển cursor
+                        const isPointing = !indexCurled && middleCurled && ringCurled && pinkyCurled;
+                        
+                        if (isPointing) {
+                            gesture = 'pointing';
+                        } else {
+                            // PRIORITY 5: OPEN PALM (4+ fingers) - Phân tán cây
+                            const extendedCount = (!indexCurled ? 1 : 0) + (!middleCurled ? 1 : 0) + (!ringCurled ? 1 : 0) + (!pinkyCurled ? 1 : 0);
+                            if (extendedCount >= 4) {
+                                gesture = 'open_palm';
+                            }
                         }
                     }
                 }

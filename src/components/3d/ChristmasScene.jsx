@@ -14,8 +14,8 @@ const ChristmasScene = () => {
     const { handState } = useStore();
     const controlsRef = useRef();
 
-    // Logic: Auto Rotate is ON unless we are currently pointing to drag
-    const shouldAutoRotate = handState !== 'pointing';
+    // Logic: Auto Rotate is ON unless we are currently using victory to drag
+    const shouldAutoRotate = handState !== 'victory';
 
     return (
         <Canvas 
