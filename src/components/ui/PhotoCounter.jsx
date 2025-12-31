@@ -66,3 +66,4 @@ const PhotoCounter = () => {
 
 export default PhotoCounter;
 
+
