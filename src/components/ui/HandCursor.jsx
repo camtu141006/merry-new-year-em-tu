@@ -8,37 +8,29 @@ const HandCursor = () => {
     
     // Màu sắc và icon theo gesture
     const cursorConfig = {
-        'pointing': { 
-            bg: 'bg-transparent', 
-            border: 'border-yellow-400', 
-            shadow: 'shadow-[0_0_15px_#EAB308]',
-            scale: 'scale-100',
-            icon: '👆',
-            pingColor: 'bg-yellow-400/30'
-        },
         'victory': { 
-            bg: 'bg-blue-500', 
-            border: 'border-blue-400', 
-            shadow: 'shadow-[0_0_15px_#3B82F6]',
-            scale: 'scale-90',
-            icon: '✌️',
-            pingColor: 'bg-blue-400/30'
-        },
-        'three_fingers': { 
             bg: 'bg-green-500', 
             border: 'border-green-400', 
             shadow: 'shadow-[0_0_15px_#10B981]',
-            scale: 'scale-125',
-            icon: '🖖',
+            scale: 'scale-110',
+            icon: '✌️',
             pingColor: 'bg-green-400/30'
         },
+        'pinch': { 
+            bg: 'bg-gold-400', 
+            border: 'border-gold-400', 
+            shadow: 'shadow-[0_0_10px_#FACC15]',
+            scale: 'scale-75',
+            icon: '🤏',
+            pingColor: 'bg-gold-400/30'
+        },
         'open_palm': { 
-            bg: 'bg-orange-500', 
-            border: 'border-orange-400', 
-            shadow: 'shadow-[0_0_15px_#F97316]',
-            scale: 'scale-140',
+            bg: 'bg-blue-500', 
+            border: 'border-blue-400', 
+            shadow: 'shadow-[0_0_15px_#3B82F6]',
+            scale: 'scale-125',
             icon: '🖐️',
-            pingColor: 'bg-orange-400/30'
+            pingColor: 'bg-blue-400/30'
         },
         'closed_fist': { 
             bg: 'bg-purple-500', 

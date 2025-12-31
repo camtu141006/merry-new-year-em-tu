@@ -72,8 +72,8 @@ const Polaroid = ({ photo, index, count }) => {
             const intersects = raycaster.intersectObject(meshRef.current, true);
             const isIntersected = intersects.length > 0;
             if (isIntersected !== hovered) setHover(isIntersected);
-            // Chỉ chọn ảnh khi có 3 fingers gesture 🖖
-            if (isIntersected && handState === 'three_fingers' && !isViewerOpen) {
+            // Chỉ chọn ảnh khi có Victory gesture ✌️
+            if (isIntersected && handState === 'victory' && !isViewerOpen) {
                 selectPhoto(photo.id);
             }
         }

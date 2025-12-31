@@ -2,27 +2,13 @@
 
 ## 🎯 Các cử chỉ điều khiển
 
-### 👆 **Pointing Gesture** - Di chuyển cursor
-**Cách làm:** Chỉ duỗi 1 ngón trỏ, các ngón khác cong lại
+### ✌️ **Victory Gesture** - Chọn ảnh
+**Cách làm:** Duỗi ngón trỏ và ngón giữa, cong ngón áp út và ngón út lại
 
 **Chức năng:** 
-- Di chuyển cursor trên màn hình
-- Cursor sẽ trong suốt viền **vàng** với icon 👆
-
-```
-     👆 Ngón trỏ (duỗi)
-     ✊ Các ngón khác (cong)
-```
-
----
-
-### ✌️ **Victory Gesture** - Kéo xoay camera
-**Cách làm:** Duỗi 2 ngón (trỏ + giữa), cong 2 ngón còn lại
-
-**Chức năng:**
-- Nhấn giữ và kéo để xoay camera quanh cây
-- Cursor sẽ chuyển sang màu **xanh dương** với icon ✌️
-- Giữ gesture này và di chuyển tay để xoay
+- Chọn và mở ảnh khi hover vào polaroid
+- Cursor sẽ chuyển sang màu **xanh lá** với icon ✌️
+- Ảnh được chọn sẽ được đánh dấu đã xem
 
 ```
      👆 Ngón trỏ (duỗi)
@@ -33,19 +19,18 @@
 
 ---
 
-### 🖖 **Three Fingers** - Chọn ảnh
-**Cách làm:** Duỗi 3 ngón (trỏ + giữa + áp út), cong ngón út
+### 🤏 **Pinch Gesture** - Xoay camera
+**Cách làm:** Chụm ngón cái và ngón trỏ lại gần nhau
 
 **Chức năng:**
-- Chọn và mở ảnh khi hover vào polaroid
-- Cursor sẽ lớn hơn và chuyển sang màu **xanh lá** với icon 🖖
-- Ảnh được chọn sẽ được đánh dấu đã xem
+- Kéo để xoay camera quanh cây
+- Cursor sẽ nhỏ lại và chuyển sang màu **vàng gold**
+- Chỉ dùng để xoay, KHÔNG chọn ảnh
 
 ```
-     👆 Ngón trỏ (duỗi)
-     👆 Ngón giữa (duỗi)
-     👆 Ngón áp út (duỗi)
-     ✊ Ngón út (cong)
+     👆 Ngón trỏ
+     👍 Ngón cái
+     (chụm lại gần nhau)
 ```
 
 ---
@@ -84,11 +69,9 @@
 
 | Gesture | Màu | Icon | Ý nghĩa |
 |---------|-----|------|---------|
-| **Pointing** | 🟡 Vàng (viền) | 👆 | Di chuyển cursor |
-| **Victory** | 🔵 Xanh dương | ✌️ | Đang kéo xoay |
-| **Three Fingers** | 🟢 Xanh lá | 🖖 | Chọn ảnh |
-| **Open Palm** | 🟠 Cam | 🖐️ | Phân tán cây |
-| **Closed Fist** | 🟣 Tím | ✊ | Tập hợp cây |
+| **Victory** | 🟢 Xanh lá | ✌️ | Sẵn sàng chọn ảnh |
+| **Pinch** | 🟡 Vàng gold | (nhỏ lại) | Đang kéo xoay |
+| **Idle** | ⚪ Trong suốt | - | Chưa nhận diện |
 
 ---
 
@@ -112,11 +95,10 @@ Nếu muốn tắt hand tracking và chỉ dùng chuột:
 ## 🎄 Tóm tắt nhanh
 
 ```
-👆  1 ngón   → Di chuyển cursor (vàng viền)
-✌️  2 ngón   → Kéo xoay camera (xanh dương)
-🖖  3 ngón   → Chọn ảnh (xanh lá)
-🖐️  4+ ngón  → Phân tán cây (cam)
-✊  Nắm tay  → Tập hợp cây (tím)
+✌️  Victory  → Chọn ảnh (xanh)
+🤏  Pinch    → Xoay camera (vàng)
+🖐️  Open     → Phân tán cây
+✊  Fist     → Tập hợp cây
 ```
 
 Chúc bạn trải nghiệm vui vẻ! 🎅✨
