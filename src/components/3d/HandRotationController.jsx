@@ -29,9 +29,9 @@ const HandRotationController = ({ controlsRef }) => {
         smoothedCursor.current.x = THREE.MathUtils.lerp(smoothedCursor.current.x, handCursor.x, smoothFactor);
         smoothedCursor.current.y = THREE.MathUtils.lerp(smoothedCursor.current.y, handCursor.y, smoothFactor);
 
-        if (handState === 'pinch') {
+        if (handState === 'pointing') {
             if (!isPinchingRef.current) {
-                // Start of pinch - reset delta tracking to the current SMOOTHED position
+                // Start of pointing - reset delta tracking to the current SMOOTHED position
                 isPinchingRef.current = true;
                 prevCursor.current = { ...smoothedCursor.current };
             } else {
@@ -75,8 +75,8 @@ const HandRotationController = ({ controlsRef }) => {
             }
         } else {
             isPinchingRef.current = false;
-            // When not pinching, keep the smoothed cursor synced slightly loosely
-            // This ensures that when we start pinching again, we aren't too far off
+            // When not pointing, keep the smoothed cursor synced slightly loosely
+            // This ensures that when we start pointing again, we aren't too far off
         }
     });
 

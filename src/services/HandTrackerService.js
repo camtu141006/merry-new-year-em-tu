@@ -76,31 +76,30 @@ class HandTrackerService {
             // 3. Determine Gesture Priority
             let gesture = 'idle';
 
-            // PRIORITY 1: VICTORY GESTURE ✌️ (Index + Middle extended, Ring + Pinky curled)
-            // Used for selecting photos
-            const isVictory = !indexCurled && !middleCurled && ringCurled && pinkyCurled;
+            // PRIORITY 1: CLOSED FIST (All main fingers curled)
+            const isFist = indexCurled && middleCurled && ringCurled && pinkyCurled;
 
-            if (isVictory) {
-                gesture = 'victory';
+            if (isFist) {
+                gesture = 'closed_fist';
                 this.isPinching = false;
             } else {
-                // PRIORITY 2: CLOSED FIST (All main fingers curled)
-                const isFist = indexCurled && middleCurled && ringCurled && pinkyCurled;
-
-                if (isFist) {
-                    gesture = 'closed_fist';
+                // PRIORITY 2: PINCH (for selecting photos)
+                // Hysteresis logic
+                if (!this.isPinching && distance < this.pinchThresholdOn) {
+                    this.isPinching = true;
+                } else if (this.isPinching && distance > this.pinchThresholdOff) {
                     this.isPinching = false;
-                } else {
-                    // PRIORITY 3: PINCH (for rotating camera only)
-                    // Hysteresis logic
-                    if (!this.isPinching && distance < this.pinchThresholdOn) {
-                        this.isPinching = true;
-                    } else if (this.isPinching && distance > this.pinchThresholdOff) {
-                        this.isPinching = false;
-                    }
+                }
 
-                    if (this.isPinching) {
-                        gesture = 'pinch';
+                if (this.isPinching) {
+                    gesture = 'pinch';
+                } else {
+                    // PRIORITY 3: POINTING 👆 (Only index finger extended)
+                    // Used for moving cursor and rotating camera
+                    const isPointing = !indexCurled && middleCurled && ringCurled && pinkyCurled;
+                    
+                    if (isPointing) {
+                        gesture = 'pointing';
                     } else {
                         // PRIORITY 4: OPEN PALM
                         // If not fist and not pinch, check if fingers are extended

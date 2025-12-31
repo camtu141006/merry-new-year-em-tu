@@ -8,21 +8,21 @@ const HandCursor = () => {
     
     // Màu sắc và icon theo gesture
     const cursorConfig = {
-        'victory': { 
+        'pointing': { 
+            bg: 'bg-yellow-500', 
+            border: 'border-yellow-400', 
+            shadow: 'shadow-[0_0_15px_#EAB308]',
+            scale: 'scale-100',
+            icon: '👆',
+            pingColor: 'bg-yellow-400/30'
+        },
+        'pinch': { 
             bg: 'bg-green-500', 
             border: 'border-green-400', 
             shadow: 'shadow-[0_0_15px_#10B981]',
             scale: 'scale-110',
-            icon: '✌️',
-            pingColor: 'bg-green-400/30'
-        },
-        'pinch': { 
-            bg: 'bg-gold-400', 
-            border: 'border-gold-400', 
-            shadow: 'shadow-[0_0_10px_#FACC15]',
-            scale: 'scale-75',
             icon: '🤏',
-            pingColor: 'bg-gold-400/30'
+            pingColor: 'bg-green-400/30'
         },
         'open_palm': { 
             bg: 'bg-blue-500', 
